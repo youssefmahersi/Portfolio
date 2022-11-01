@@ -23,7 +23,7 @@ const links = [
     },
     {
         name: 'Portfolio',
-        to: '/portfolio',
+        to: '/olio',
         active: 'portfolio'
     }
 ]
