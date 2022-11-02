@@ -3,7 +3,7 @@ import Style from './Navbar.module.scss';
 import {Link, useLocation} from "react-router-dom";
 import {Box} from "@mui/material";
 import {info} from "../info/Info";
-
+import Toggler from "./home/Toggler";
 const links = [
     {
         name: 'Home',
@@ -28,7 +28,7 @@ const links = [
     }
 ]
 
-export default function Navbar() {
+export default function Navbar({darkMode, handleClick}) {
     const location = useLocation()
     const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
 
@@ -45,6 +45,9 @@ export default function Navbar() {
                         </Link>
                     </Box>
                 ))}
+                <li>
+                    <Toggler darkMode={darkMode} handleClick={handleClick}/>
+                </li>
             </Box>
         </Box>
     )

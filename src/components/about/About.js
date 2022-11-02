@@ -15,10 +15,7 @@ export default function About() {
                 about{firstName} </p>
             <p><span style={{color: info.baseColor}}>about{firstName} <span
                 className={Style.green}>(main)</span> $ </span>
-                <span
-                className={Style.pink}>
                 {info.bio}
-                </span>
             </p>
         </>;
     }
@@ -37,7 +34,7 @@ export default function About() {
             <Grid container spacing={{ xs: 1, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     
                 
-                {info.skills.proficientWith.map((proficiency, index) => (<Grid xs={2} sm={4} md={4} key={index}>
+                {info.skills.proficientWith.map((proficiency, index) => (<Grid xs={1} sm={4} md={4} key={index}>
                     <ToolIcon link={proficiency}/>
                        </Grid>
                        ))}
@@ -68,7 +65,7 @@ export default function About() {
                 className={Style.green}>(main)</span> $</span> ls</p>
             <ul>
                 {info.hobbies.map((hobby, index) => (
-                    <li key={index}><Box component={'span'} mr={'1rem'}>{hobby.emoji}</Box><spam className={Style.pink}>{hobby.label}</spam></li>
+                    <li key={index}><Box component={'span'} mr={'1rem'}>{hobby.emoji}</Box>{hobby.label}</li>
                 ))}
             </ul>
         </>;

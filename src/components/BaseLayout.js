@@ -14,11 +14,11 @@ export default function BaseLayout() {
    }
 
    return (   
-      <Box className={Style.screen}>
+      <Box className={darkMode ? Style.dark : Style.light}>
          <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
                justifyContent={'space-between'}>
             <Grid item>
-               <Navbar darkMode={darkMode} handleClick={handleClick}/>
+               <Navbar darkMode={darkMode} handleClick={handleClick} />
             </Grid>
             <Grid item flexGrow={1}>
                <Routes>
