@@ -31,10 +31,10 @@ export default function About() {
                 Proficient With
                 </span></p>
             <div className={Style.container}> 
-            <Grid container spacing={{ xs: 1, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     
                 
-                {info.skills.proficientWith.map((proficiency, index) => (<Grid xs={1} sm={4} md={4} key={index}>
+                {info.skills.proficientWith.map((proficiency, index) => (<Grid xs={2} sm={4} md={4} key={index}>
                     <ToolIcon link={proficiency}/>
                        </Grid>
                        ))}
@@ -45,7 +45,7 @@ export default function About() {
                 Exposed To
                 </span></p>
             <div className={Style.container}> 
-            <Grid container spacing={{ xs: 1, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     
                 
                 {info.skills.exposedTo.map((skill, index) => (<Grid xs={2} sm={4} md={4} key={index}>
